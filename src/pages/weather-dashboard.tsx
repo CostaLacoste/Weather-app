@@ -1,8 +1,8 @@
 import { MapPin, RefreshCw } from "lucide-react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import React from "react";
-import { useGeoLocation } from "@/hooks/use-gelolocation";
-import WeatherSkeletion from "@/Components/loading-skeleton";
+import { useGeoLocation } from "@/hooks/use-geolocation";
+import WeatherSkeletion from "@/components/loading-skeleton";
 import { AlertCircleIcon } from "lucide-react";
 import {
   Alert,

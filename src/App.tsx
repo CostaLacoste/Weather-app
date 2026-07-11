@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Components/layout';
+import Layout from './components/layout';
 import { ThemeProvider } from './Context/theme-provider';
 import WeatherDashboard from './pages/weather-dashboard';
 import CityPage from './pages/city-page';
