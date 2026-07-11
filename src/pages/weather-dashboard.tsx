@@ -10,6 +10,7 @@ import {
   AlertTitle,
 } from "@/components/ui/alert";
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/use-weather";
+import CurrentWeather from "@/components/current-weather";
 
 const WeatherDashboard = () => {
     const { coordinates, error: locationError, getLocation, isLoading: locationLoading, } = useGeoLocation();
