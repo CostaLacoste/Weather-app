@@ -92,6 +92,14 @@ const WeatherDashboard = () => {
                     <RefreshCw className={`h-4 w-4 ${weatherQuery.isFetching ? "animate-spin" : ""}`}/>
                 </Button>
             </div>
+            <div className="grid gap-6">
+                <div>
+                    <CurrentWeather data={weatherQuery.data} location={locationName} />
+                </div>
+                <div>
+
+                </div>
+            </div>
         </div>
     );
 }
