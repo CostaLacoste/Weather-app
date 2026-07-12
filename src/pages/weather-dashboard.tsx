@@ -12,6 +12,7 @@ import {
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/use-weather";
 import CurrentWeather from "@/components/current-weather";
 import HourlyTemperature from "@/components/hourly-temperature";
+import WeatherDetails from "@/components/weather-details";
 
 const WeatherDashboard = () => {
     const { coordinates, error: locationError, getLocation, isLoading: locationLoading, } = useGeoLocation();
@@ -100,7 +101,7 @@ const WeatherDashboard = () => {
                     <HourlyTemperature data={forecastQuery.data} />
                 </div>
                 <div>
-
+                    <WeatherDetails data={weatherQuery.data}/>
                 </div>
             </div>
         </div>
