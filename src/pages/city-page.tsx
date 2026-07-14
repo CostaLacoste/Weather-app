@@ -8,12 +8,13 @@ import WeatherDetails from "@/components/weather-details";
 import WeatherForecast from "@/components/weather-forecast";
 import HourlyTemperature from "@/components/hourly-temperature";
 import CurrentWeather from "@/components/current-weather";
+import FavoriteButton from "@/components/favorite-button";
 
 const CityPage = () => {
     const [searchParams] = useSearchParams();
     const params = useParams();
     const lat = parseFloat(searchParams.get("lat") || "0");
-    const lon = parseFloat(searchParams("lon") || "0");
+    const lon = parseFloat(searchParams.get("lon") || "0");
 
     const coordinates = { lat, lon };
 
@@ -40,6 +41,9 @@ const CityPage = () => {
         <div className="space-y-4">
             <div className="flex items-center justify-between">
                 <h1 className="text-3xl font-bold tracking-tight">{params.cityName}, {weatherQuery.data.sys.country}</h1>
+                <div>
+                    <FavoriteButton data={{...weatherQuery.data, name: params.cityName}} />
+                </div>
             </div>
             <div className="grid gap-6">
                 <div className="flex flex-col gap-4">
