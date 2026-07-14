@@ -1,6 +1,5 @@
 import { MapPin, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React from "react";
 import { useGeoLocation } from "@/hooks/use-geolocation";
 import WeatherSkeletion from "@/components/loading-skeleton";
 import { AlertCircleIcon } from "lucide-react";
@@ -100,7 +99,7 @@ const WeatherDashboard = () => {
             </div>
             <div className="grid gap-6">
                 <div className="flex flex-col lg:flex-row gap-4">
-                    <CurrentWeather data={weatherQuery.data} location={locationName} />
+                    <CurrentWeather data={weatherQuery.data} locationName={locationName} />
                     <HourlyTemperature data={forecastQuery.data} />
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 items-start">

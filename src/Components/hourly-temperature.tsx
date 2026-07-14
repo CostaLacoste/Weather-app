@@ -1,7 +1,6 @@
-import React from 'react';
 import type { ForecastData } from '@/api/types';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip } from "recharts";
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip as RechartsTooltip } from "recharts";
 import { format } from 'date-fns';
 
 interface HourlyTemperatureProps {
