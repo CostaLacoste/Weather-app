@@ -11,7 +11,7 @@ const Header = () => {
         <header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur py-2 supports-backdrop-filter:bg-background/60'>
             <div className='conteiner mx-auto h-16 flex items-center justify-between px-4'>
                 <Link to="/">
-                    <img src={isDark ? '../../public/logo.png' : '../../public/logo2.png'} alt="Klimate logo" className='h-14' />
+                    <img src={isDark ? `${import.meta.env.BASE_URL}logo.png` : `${import.meta.env.BASE_URL}logo2.png`} alt="Klimate logo" className='h-14' />
                 </Link>
                 <div className='flex gap-4'>
                     <CitySearch/>
